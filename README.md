@@ -11,6 +11,38 @@ For new WhatsApp updates check **[WhatsApp incoming updates log](https://github.
 - ![btc](https://camo.githubusercontent.com/4bc31b03fc4026aa2f14e09c25c09b81e06d5e71/687474703a2f2f7777772e6d6f6e747265616c626974636f696e2e636f6d2f696d672f66617669636f6e2e69636f) Bitcoin: 1DCEpC9wYXeUGXS58qSsqKzyy7HLTTXNYe 
 
 ----------
+### Modifications
+```sh
+index.php
+
+<?php
+error_reporting(E_ERROR| E_PARSE);
+
+require 'src/whatsprot.class.php';
+
+$username = "91%%%%%%%%4";
+$nickname = " ";
+$identiy  = "%9b%eab%9c%d6%af%cc%f9%f34%26%24s%07%90%f7i%24a%1f";
+$password = "UTM5eudxCzxvp$$$$$$$alTDA="; // The one we got registering the number
+$debug = false;
+
+$w = new WhatsProt($username,$identiy,$nickname,$debug);
+$w->connect(); // Connect to WhatsApp network
+$w->loginWithPassword($password); // logging in with the password we got!
+
+$no="91%%%%%%%%%%2"; // Number on which you want to send message
+$msg="jj"; // Message text
+$w->sendMessage($no, $msg);
+
+?>
+
+
+
+```
+let me know if these worked for you sending 
+
+
+
 ### Installation
 
 ```sh
